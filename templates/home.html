@@ -2,66 +2,80 @@
 <html>
 <head>
     <title>The Sister's Cleaning Company</title>
-  <style>
-      body {
-          font-family: 'Arial', sans-serif;
-          background: url('background-image.jpg') no-repeat center center fixed;
-          background-size: cover;
-          color: #666666;
-          text-align: center;
-          padding: 40px;
-      }
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+        }
 
-      h1 {
-          font-family: 'Georgia', 'Times New Roman', serif;
-          font-size: 48px;
-          margin: 0;
-          padding: 20px;
-          text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-      }
+        h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 48px;
+            margin: 0;
+            padding: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
 
-      p {
-          font-size: 18px;
-          margin: 0;
-          padding: 20px;
-      }
+        p {
+            font-size: 18px;
+            margin: 0;
+            padding: 20px;
+        }
 
-      nav ul {
-          list-style: none;
-      }
+        nav ul {
+            list-style: none;
+        }
 
-      nav ul li {
-          display: inline;
-          margin: 10px;
-      }
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
 
-      a {
-          text-decoration: none;
-          color: #007bff ;
-          font-weight: bold;
-          font-size: 24px;
-      }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 24px;
+        }
 
-      a:hover {
-          text-decoration: underline;
-      }
+        a:hover {
+            text-decoration: underline;
+        }
 
-      main {
-          background-color: rgba(0, 0, 0, 0.5);
+        main {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+      /* Style the "About Us" section */
+      section {
+          background: rgba(0, 0, 0, 0.7);
+          color: #ffffff;
           padding: 20px;
           border-radius: 10px;
-      }
-
-      section {
           margin: 20px;
+          text-align: left;
       }
 
       h2 {
           font-size: 32px;
           margin: 0;
           padding: 10px;
+          color: #007bff; /* Blue color for headings */
       }
 
+      p {
+          font-size: 18px;
+          margin: 0;
+          padding: 10px;
+      }
+
+      /* Style the "Services" section */
       ul {
           list-style-type: disc;
           padding-left: 40px;
@@ -72,37 +86,85 @@
           margin: 5px;
       }
 
+      /* Style the "Contact Us" section */
+      h2 {
+          font-size: 32px;
+          margin: 20px 0;
+          padding: 10px;
+          color: #007bff; /* Blue color for headings */
+      }
+
+      /* Style the footer */
       footer {
           margin-top: 50px;
+          background: rgba(0, 0, 0, 0.7);
+          padding: 20px;
+          border-radius: 10px;
+          text-align: center;
       }
-  </style>
+
+      footer p {
+          font-size: 18px;
+          color: #ffffff;
+      }
+
+
+        /* Enhancements for image responsiveness */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Stylish Book Now button */
+        .book-now-button {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 24px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .book-now-button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to the Sister's Cleaning Co.</h1>
         <p>Your trusted partner for a clean and healthy home or office.</p>
     </header>
+    <img src="https://the-sisters-cleaning--modestechris.repl.co/static/image2.jpeg" alt="Cleaning Services" class="image">
     <nav>
-      <a href="{{ url_for('booking') }}" target="_blank">Book Now</a>
-
+        <a href="{{ url_for('booking') }}" target="_blank" class="book-now-button">Book Now</a>
     </nav>
     <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We are a professional cleaning service dedicated to providing top-quality cleaning solutions for your home or office.</p>
-        </section>
-        <section>
-            <h2>Services</h2>
-            <ul>
-                <li>House Cleaning</li>
-                <li>Office Cleaning</li>
-                <li>Carpet Cleaning</li>
-                <li>Window Cleaning</li>
-            </ul>
-        </section>
+      <section>
+          <h2>About Us</h2>
+          <p>We are a professional cleaning service dedicated to providing top-quality cleaning solutions for your home or office.</p>
+      </section>
+
+      <section>
+          <h2>Services</h2>
+          <ul>
+              <li>House Cleaning</li>
+              <li>Office Cleaning</li>
+              <li>Carpet Cleaning</li>
+              <li>Window Cleaning</li>
+          </ul>
+      </section>
+      
+      <nav>
+        <a href="{{ url_for('contact') }}">Contact us for more Information</a>
+      </nav>
+
     </main>
+  
     <footer>
         <p>&copy; 2023 The Sister's Cleaning Co.</p>
     </footer>
 </body>
-</html> 
+</html>

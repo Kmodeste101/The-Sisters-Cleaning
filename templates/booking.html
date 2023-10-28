@@ -1,20 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Book Cleaning Appointment</title>
+    <title>Book a Cleaning Appointment</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffffff, #000000);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-radius: 5px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        input[type="submit"] {
+            background: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style enhancements to match the homepage */
+        h1 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Match the "Book Now" button style from the homepage */
+        input[type="submit"] {
+            background: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Book a Cleaning Appointment</h1>
-
+    <p>Choose a service and schedule an appointment with us.</p>
     <form action="submit_form.php" method="POST">
         <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" name="email" required>
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required><br>
+        <input type="tel" id="phone" name="phone" required>
 
         <label for="service">Select Service:</label>
         <select id="service" name="service" required>
@@ -22,20 +123,19 @@
             <option value="office_cleaning">Office Cleaning</option>
             <option value="carpet_cleaning">Carpet Cleaning</option>
             <option value="window_cleaning">Window Cleaning</option>
-          <option value="window_cleaning">AirBnB Maintenance</option>
-          <option value="window_cleaning">Post-construction </option>
-        </select><br>
+        </select>
 
         <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date" required><br>
+        <input type="date" id="date" name="date" required>
 
-        <label for="time">Preferred Time:</label>
-        <input type="time" id="time" name="time" required><br>
+        <label for "time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
 
         <label for="message">Additional Comments:</label>
-        <textarea id="message" name="message" rows="4"></textarea><br>
+        <textarea id="message" name="message" rows="4"></textarea>
 
         <input type="submit" value="Book Appointment">
     </form>
+  <p><a href="home.html">Back to Home</a></p>  #needs fixing to return back home
 </body>
 </html>
