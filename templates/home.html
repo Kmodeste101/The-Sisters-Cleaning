@@ -2,6 +2,80 @@
 <html>
 <head>
     <title>The Sister's Cleaning Company</title>
+  <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          background: url('background-image.jpg') no-repeat center center fixed;
+          background-size: cover;
+          color: #666666;
+          text-align: center;
+          padding: 40px;
+      }
+
+      h1 {
+          font-family: 'Georgia', 'Times New Roman', serif;
+          font-size: 48px;
+          margin: 0;
+          padding: 20px;
+          text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+          font-size: 18px;
+          margin: 0;
+          padding: 20px;
+      }
+
+      nav ul {
+          list-style: none;
+      }
+
+      nav ul li {
+          display: inline;
+          margin: 10px;
+      }
+
+      a {
+          text-decoration: none;
+          color: #007bff ;
+          font-weight: bold;
+          font-size: 24px;
+      }
+
+      a:hover {
+          text-decoration: underline;
+      }
+
+      main {
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 20px;
+          border-radius: 10px;
+      }
+
+      section {
+          margin: 20px;
+      }
+
+      h2 {
+          font-size: 32px;
+          margin: 0;
+          padding: 10px;
+      }
+
+      ul {
+          list-style-type: disc;
+          padding-left: 40px;
+      }
+
+      li {
+          font-size: 18px;
+          margin: 5px;
+      }
+
+      footer {
+          margin-top: 50px;
+      }
+  </style>
 </head>
 <body>
     <header>
@@ -9,10 +83,8 @@
         <p>Your trusted partner for a clean and healthy home or office.</p>
     </header>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="booking.html">Book Now</a></li>
-        </ul>
+      <a href="{{ url_for('booking') }}" target="_blank">Book Now</a>
+
     </nav>
     <main>
         <section>
