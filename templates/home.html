@@ -162,13 +162,16 @@
       </section>
 
       <section>
-          <h2>Services</h2>
-          <ul style="text-align:center;">
-              <li>House Cleaning</li>
-              <li>Office Cleaning</li>
-              <li>Carpet Cleaning</li>
-              <li>Window Cleaning</li>
-          </ul>
+          <h2>Services offered</h2>
+          <p>
+            {% for service in services%} 
+            <div>
+              <h4></h4>{{service['title']}}</h4>  
+              <div><b>Description</b>:{{service['description']}}</div>
+              <div><b>Price</b>:{{service ['cost']}}</div>
+            </div>
+            {% endfor %}
+          </p>  
       </section>
       
       <nav>
