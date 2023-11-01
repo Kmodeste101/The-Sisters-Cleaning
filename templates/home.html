@@ -1,189 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Sister's Cleaning Company</title>
-    <style>
-        body {
-            font-family:Roboto;
-            background: url('background-image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            text-align: center;
-            padding: 40px;
-        }
-
-        h1 {
-            font-family:Roboto;
-            font-size: 40px;
-            padding: 20px;
-            text-align:center;
-            color:rgb(100, 100, 100);
-        }
-
-        p {
-            font-size: 18px;
-            margin: 0;
-            padding: 20px;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-      /* Style the "About Us" section */
-      section {
-          background: rgba(0, 0, 0, 0.7);
-          color: #ffffff;
-          padding: 20px;
-          border-radius: 10px;
-          text-align: left;
-      }
-
-      h2 {
-          font-size: 32px;
-          margin: 0 auto 0 auto;
-          padding: 10px;
-          color: #007bff; /* Blue color for
-        headings */
-         text-align:center;
-      }
-
-      .bodytext {
-          font-size: 18px;
-          margin: 0 auto 0 auto;
-          padding: 10px;
-      }
-
-      /* Style the "Services" section */
-      ul {
-          list-style-type: disc;
-          padding-left: 40px;
-      }
-
-      li {
-          font-size: 18px;
-          margin: 0 auto 0 auto;
-      }
-
-      /* Style the "Contact Us" section */
-      h2 {
-          font-size: 32px;
-          text-align: center;
-          padding: 10px;
-          color: #007bff; /* Blue color for headings */
-      }
-
-      /* Style the footer */
-      footer {
-          margin: 0 auto 0 auto;
-          background: rgba(0, 0, 0, 0.7);
-          padding: 20px;
-          border-radius: 10px;
-          text-align: center;
-      }
-
-      footer p {
-          font-size: 18px;
-          color: #ffffff;
-      }
-
-
-        /* Enhancements for image responsiveness */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Stylish Book Now button */
-        .book-now-button {
-            background: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 24px;
-            border: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-            transition: background 0.3s;
-        }
-
-        .book-now-button:hover {
-            background: #0056b3;
-        }
-      #banner{
-        width: 100%;
-        height: 360px;
-        object-fit:cover;
-      }
-      #container{
-        max-width: 720px;
-        margin: 0 auto 0 auto;
-        padding: 0 auto 0 auto;
-        boader: 0 auto 0 auto;
-        
-      }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Sister's Cleaning Company</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-  <div id="container">
-    <header>
-        <h1>Welcome to the Sister's Cleaning Co.</h1>
-        <p class="bodytext">Your trusted partner for a clean and healthy home or office.
-        </p>
-    </header>
-    <img id="banner" src="https://the-sisters-cleaning--modestechris.repl.co/static/image2.jpeg" alt="Cleaning Services" class="image">
-    <nav>
-        <a href="{{ url_for('booking') }}" target="_blank" class="book-now-button">Book Now</a>
-    </nav>
-    <main>
-      <section>
+  <header class="bg-primary text-white text-center py-5">
+    <h1>Welcome to the Sister's Cleaning Co.</h1>
+    <p>Your trusted partner for a clean and healthy home or office.</p>
+    <a href="{{ url_for('booking') }}" class="btn btn-success">Book Now</a>
+  </header>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="https://the-sisters-cleaning--modestechris.repl.co/static/image2.jpeg" alt="Cleaning Services" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <section>
           <h2>About Us</h2>
-          <p class="bodytext">We are a professional cleaning service dedicated to providing top-quality cleaning solutions for your home or office.</p>
-      </section>
-
-      <section>
-          <h2>Services offered</h2>
-          <p>
-            {% for service in services%} 
-            <div>
-              <h4></h4>{{service['title']}}</h4>  
-              <div><b>Description</b>:{{service['description']}}</div>
-              <div><b>Price</b>:{{service ['cost']}}</div>
-            </div>
-            {% endfor %}
-          </p>  
-      </section>
-      
-      <nav>
-        <a href="{{ url_for('contact') }}">Contact us for more Information</a>
-      </nav>
-
-    </main>
-  
-    <footer>
-        <p>&copy; 2023 The Sister's Cleaning Co.</p>
-    </footer>
+          <p>We are a professional cleaning service dedicated to providing top-quality cleaning solutions for your home or office.</p>
+        </section>
+      </div>
+    </div>
   </div>
-</body>
+
+  <div class="container mt-5">
+    <section>
+      <h2>Services offered</h2>
+      <div class="row">
+        {% for service in services %}
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h4 class="card-title">{{ service['title'] }}</h4>
+              <p class="card-text"><b>Description</b>: {{ service['description'] }}</p>
+              <p class="card-text"><b>Price</b>: {{ service['cost'] }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <div class="container mt-5">
+    <nav class="text-center">
+      <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact us for more Information</a>
+    </nav>
+  </div>
+
+  <footer class="text-center mt-5">
+    <p>&copy; 2023 The Sister's Cleaning Co.</p>
+  </footer>
 </body>
 </html>
