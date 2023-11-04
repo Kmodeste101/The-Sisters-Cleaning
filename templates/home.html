@@ -28,51 +28,50 @@
     </div>
   </div>
 
-  <div class="p-3 mb-2 bg-primary text-white">
+  
     <section>
-      <div class="p-3 mb-2 bg-primary text-white">
-        <section>
-          <h2>Services offered</h2>
-          <div class="column">
-            {% for service in services %}
-            <div class="col-md-4">
-              <div class="card mb-4">
-                <div class="card-body">
-                  <h4 class="card-title">{{ service['title'] }}</h4>
-                  <p class="card-text"><b>Description</b>: {{ service['description'] }}</p>
-                  {% if service['title'] == 'House cleaning' %}
-                  <p class="card-text"><i class="fas fa-home"></i> </p>
-                  {% elif service['title'] == 'Post-construction cleaning' %}
-                  <p class="card-text"><i class="fas fa-tools"></i> </p>
-                  {% elif service['title'] == 'Move in/ Move out cleaning' %}
-                  <p class="card-text"><i class="fas fa-truck-moving"></i> </p>
-                  {% elif service['title'] == 'Airbnb Cleaning' %}
-                  <p class="card-text"><i class="fas fa-bed"></i> </p>
-                  {% else %}
-                  <!-- Add a default icon or text for other services -->
-                  <p class="card-text">Icon or Text for Other Services</p>
-                  {% endif %}
-                  <!-- <p class="card-text"><b>Price</b>: {{ service['cost'] }}</p> -->
+          <div class="p-3 mb-2 bg-primary text-white">
+            <section class="text-center">
+              <h2>Services offered</h2>
+              <div class="row">
+                {% for service in services %}
+                <div class="col-md-4 mx-auto"> <!-- Center the card within the loop -->
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h4 class="card-title">{{ service['title'] }}</h4>
+                      <!-- <p class="card-text"><b>Description</b>: {{ service['description'] }}</p> -->
+                      {% if service['title'] == 'House cleaning' %}
+                      <p class="card-text"><i class="fas fa-home"></i> </p>
+                      {% elif service['title'] == 'Post-construction cleaning' %}
+                      <p class="card-text"><i class="fas fa-tools"></i> </p>
+                      {% elif service['title'] == 'Move in/ Move out cleaning' %}
+                      <p class="card-text"><i class="fas fa-truck-moving"></i> </p>
+                      {% elif service['title'] == 'Airbnb Cleaning' %}
+                      <p class="card-text"><i class="fas fa-bed"></i> </p>
+                      {% else %}
+                      <!-- Add a default icon or text for other services -->
+                      <p class="card-text">Icon or Text for Other Services</p>
+                      {% endif %}
+                      <!-- <p class="card-text"><b>Price</b>: {{ service['cost'] }}</p> -->
+                    </div>
+                  </div>
                 </div>
+                {% endfor %}
               </div>
-            </div>
-            {% endfor %}
+            </section>
           </div>
-        </section>
+
+
+      <div class="container mt-5">
+        <nav class="text-center">
+          <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact us for more Information</a>
+        </nav>
       </div>
 
-
-
-  <div class="container mt-5">
-    <nav class="text-center">
-      <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact us for more Information</a>
-    </nav>
-  </div>
   <!--<p><i class="fas fa-home"></i> House Cleaning</p>
   <p><i class="fas fa-tools"></i> Post-Construction Cleaning</p>
   <p><i class="fas fa-truck-moving"></i> Move-In/Move-out Cleaning</p>
   <p><i class="fas fa-bed"></i> Airbnb Cleaning</p> -->
-
   <footer class="text-center mt-5">
     <p>&copy; 2023 The Sister's Cleaning Co.</p>
   </footer>
